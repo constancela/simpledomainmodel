@@ -128,7 +128,7 @@ open class Job {
 
 ////////////////////////////////////
 // Person
-
+//
 open class Person {
   open var firstName : String = ""
   open var lastName : String = ""
@@ -171,7 +171,7 @@ open class Person {
 
 ////////////////////////////////////
 // Family
-
+//
 open class Family {
   fileprivate var members : [Person] = []
 
@@ -192,18 +192,10 @@ open class Family {
   open func householdIncome() -> Int {
     var total = 0
     for member in members {
-        
         if member.job != nil {
-            print(member.firstName)
             total += Int(member.job!.calculateIncome(2000))
         }
     }
-    print(total)
     return total
   }
 }
-
-
-
-
-
